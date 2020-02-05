@@ -1,2 +1,1 @@
-#!/bin/bash                                                                                                   
-gcc -c $CFILE $CFILE.o
+#!/bin/bash                                                                    gcc -c $CFILE 
