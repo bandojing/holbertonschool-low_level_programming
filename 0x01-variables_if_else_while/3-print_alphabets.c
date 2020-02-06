@@ -7,13 +7,18 @@
 
 int main(void)
 {
+	int lowercase;
+	int uppercase;
 
-	int alpha;
-
-	for (alpha = 65; alpha < 91; alpha++)
+	for (lowercase = 97; lowercase <= 122; lowercase++)
 	{
-		putchar (alpha);
+		putchar (lowercase);
 	}
+	for (uppercase = 65; uppercase < 91; uppercase++)
+	{
+		putchar (uppercase);
+	}
+
 	putchar ('\n');
 
 	return (0);
