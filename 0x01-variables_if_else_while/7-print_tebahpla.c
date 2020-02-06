@@ -7,11 +7,11 @@
 
 int main(void)
 {
-	int r;
+	int numbs;
 
-	for (r= 122; r > 96; r--)
+	for (numbs = 0; numbs <= 9; numbs++)
 	{
-		putchar (r);
+		putchar (numbs + '0');
 	}
 	putchar ('\n');
 
