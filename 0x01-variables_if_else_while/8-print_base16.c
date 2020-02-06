@@ -16,7 +16,7 @@ int main(void)
 		putchar (numbs + '0');
 	}
 
-	for (bets; bets <= 'f'; bets++)
+	for (bets = 'a'; bets <= 'f' ; bets++)
 	{
 
 		putchar (bets);
