@@ -14,7 +14,7 @@ int main(void)
 	{
 		printf("%i", digits);
 	}
-	putchar ('\n');
+	putchar('\n');
 	return (0);
 
 
