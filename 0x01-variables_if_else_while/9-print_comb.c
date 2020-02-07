@@ -20,9 +20,9 @@ int main(void)
 		{
 			putchar(44);
 			putchar(32);
-
 		}
 	}
+	putchar(36);
 
 	return (0);
 }
