@@ -11,22 +11,15 @@
 
 int print_last_digit(int ablast)
 {
+	int last = ablast % 10;
 
-
-	if (ablast < 0)
+	if (last < 0)
 	{
-		return((ablast % 10) * -1);
-
-		_putchar(ablast + '0');
-
+		last = last * -1;
+		_putchar(last + '0');
+		return (last);
 	}
-	else if (ablast >= 0)
-	{
-		return((ablast % 10));
-		_putchar(ablast + '0');
-	}
-
-
-	return (0);
+	_putchar(last + '0');
+	return (last);
 
 }
