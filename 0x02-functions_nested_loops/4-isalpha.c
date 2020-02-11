@@ -3,9 +3,9 @@
  * _isalpha - checks if int c is any letter in the alphabet
  *
 (* a blank line
-* Description: compares alphabet ascii to characters that are not letters
+* @c: is an integer that will become an ascii value
 (* returns 0 if they are returns 1 if they are a letter
-* Return: return 0 or return 1
+* Return: return 0 or 1
 */
 int _isalpha(int c)
 {
