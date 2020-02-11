@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "holberton.h"
 /**
  * print_alphabet - this function prints a-z using for loop and putchar
 (*
@@ -15,29 +15,7 @@
 
 		for (alpha = 97; alpha <= 122; alpha++)
 		{
-			putchar(alpha);
+			_putchar(alpha);
 		}
-
-		
-
-	}
-
-
-
-/**
- * main- calls to print_alphabet function
-(*
-* Description: print alphabet prints alphabet then a newline is printed
-*
-(*
-* Return: int main returns void print alphabet returns void
-*/
-	int main(void)
-	{
-
-
-	print_alphabet();
-	putchar('\n');
-	return (0);
-
+		_putchar(10);
 	}
