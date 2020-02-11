@@ -1,18 +1,20 @@
 #include "holberton.h"
 
 /**
- * int add - adds two integers and outputs the sum
+ *add - adds two integers and outputs the sum
  *
 (* a blank line
-* Desription: Longer description of the function)?
+* @one: first int passed into fucntion
+* @two: second int passed into function
 (* section header: Section description)*
 * Return: returns an integer named three
 */
 
-int add (int one,int two)
+int add(int one, int two)
 {
 	int three;
+
 	three = one + two;
-	return three;;
+	return (three);
 }
 
