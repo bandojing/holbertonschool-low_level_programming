@@ -8,28 +8,21 @@
 
 void jack_bauer(void)
 {
-	int one;
-	int two;
-	int three;
-	int four;
 
 
-	for (one = 0; one <= 2; one++)
+	int first;
+	int second;
+
+	for (first = 0; first <= 23; first++)
 	{
-		for (two = 0; two <= 3; two++)
+		for (second = 0; second <= 59; second++)
 		{
-			for (three = 0; three <= 5; three++)
-			{
-				for (four = 0; four <= 9; four++)
-				{
-					printf("%d", one);
-					printf("%d", two);
-					printf(":");
-					printf("%d", three);
-					printf("%d", four);
-					printf("\n");
-				}
-			}
+			_putchar(first / 10 + '0');
+			_putchar(first % 10 + '0');
+			_putchar(':');
+			_putchar(second /10 + '0');
+			_putchar(second % 10 + '0');
+			_putchar('\n');
 		}
 	}
 }
