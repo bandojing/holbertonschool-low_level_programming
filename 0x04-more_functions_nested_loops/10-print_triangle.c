@@ -5,7 +5,7 @@
  * @size: size determines size of triangle
 (* a blank line
 * Description: size determines size of triangle
-* Return: returns voie
+* Return: returns void
 */
 
 
