@@ -6,8 +6,7 @@
  * print_square - prints a square size x size
  * @size: integer determines dimensions of the square
 (* a blank line
-* Description: Longer description of the function)?
-(* section header: Section description)*
+* Description: takes in the size of the square if size is 0 prints only newline
 * Return: void
 */
 void print_square(int size)
