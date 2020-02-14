@@ -19,16 +19,15 @@ void print_square(int size)
 
 	if (size > 0)
 	{
-	for (rows = 0; rows <= size; rows++)
+	for (rows = 1; rows <= size; rows++)
 	{
-		for (columnss = 0; columns <= size; columns++)
+		for (columns = 1; columns <= size; columns++)
 		{
 			_putchar(35);
 		}
 		_putchar(10);
 	}
 	}
-	_putchar(10);
 
 
 }
