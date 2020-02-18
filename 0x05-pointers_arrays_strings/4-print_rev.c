@@ -25,8 +25,8 @@ for (stringcounter = 0; s[stringcounter] != '\0'; stringcounter++)
 
 for (transfercounter = stringcounter; transfercounter >= 0; transfercounter--)
 {
-	printf("%c", s[transfercounter]);
+	_putchar(s[transfercounter]);
 }
 
-printf("\n");
+_putchar('\n');
 }
