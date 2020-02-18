@@ -13,21 +13,27 @@
 
 void puts_half(char *str)
 {
-	int stringleng;
-	int halfstring;
+	int stringleng = 0;
+	int n = 0;
 
 
 	while (str[stringleng] != '\0')
 	{
 		stringleng++;
 	}
+	stringleng--;
 
-	halfstring = stringleng / 2;
-
-	while (str[halfstring] != str[stringleng])
+	if (stringleng % 2 == 1)
 	{
-		_putchar(str[halfstring]);
-		halfstring++;
+		n = (stringleng - 1) / 2;
 	}
+	else
+		n = stringleng / 2;
+
+	while (str[n] != str[stringleng])
+		{
+			n++;
+			_putchar(str[n]);
+		}
 	_putchar('\n');
 }
