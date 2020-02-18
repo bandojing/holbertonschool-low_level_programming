@@ -1,12 +1,14 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * rev_string - a function that reverses a string
- * @s: string being passed in that will be reversed
-* Description: this function reverses a string
+ * rev_string - a function that reverses the elements of a string
+ * @s: string to be reversed
+(* a blank line
+* Description: reversing or swapping elements within a string so that
+* it can be printed out in main function
+(* section header: Section description)*
 * Return: returns void
 */
-
 
 void rev_string(char *s)
 {
@@ -18,14 +20,13 @@ void rev_string(char *s)
 	int sinc = 0;
 	int newdec;
 
-	/* need to find a way to swap values
-	   1 2 3 4 5
-	   5 4 3 2 1 */
 
-/*finding the length of the string*/
-/*incrementing length to get the lenght of the string*/
-	/*setting up length of string and making another
-	  string of the same size*/
+/* need to find a way to swap values */
+/* 1 2 3 4 5 */
+/* 5 4 3 2 1 */
+
+
+/*finding the string length*/
 	for (length = 0; s[length] != '\0'; length++)
 	{
 		newstring[length] = s[length];
@@ -33,22 +34,17 @@ void rev_string(char *s)
 	/*subtracting the null byte*/
 	length--;
 
-	/*making the index number for newstring equal to
-	  the length of the string*/
+	/*new integer holds the string length*/
 	newdec = length;
-
-	while(sinc <= length)
+/*inc and dec the strings*/
+	while (sinc <= length)
 	{
 		s[sinc] = newstring[newdec];
 		sinc++;
 		newdec--;
 	}
+	/*adding the null byte*/
 	s[sinc++] = '\0';
 
 
-/** def need to do
- * swap = *a
- * *a = *b
- * *b = swap
- */
 }
