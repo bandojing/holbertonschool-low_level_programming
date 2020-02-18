@@ -21,7 +21,6 @@ void puts_half(char *str)
 	{
 		stringleng++;
 	}
-	stringleng--;
 
 	if (stringleng % 2 != 0)
 	{
