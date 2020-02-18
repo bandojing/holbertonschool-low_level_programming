@@ -23,17 +23,18 @@ void puts_half(char *str)
 	}
 	stringleng--;
 
-	if (stringleng % 2 == 1)
+	if (stringleng % 2 != 0)
 	{
 		n = (stringleng - 1) / 2;
+		n++;
 	}
 	else
 		n = stringleng / 2;
 
-	while (str[n] != str[stringleng])
+	while (str[n] != '\0')
 	{
-		n++;
 		_putchar(str[n]);
+		n++;
 	}
 	_putchar('\n');
 }
