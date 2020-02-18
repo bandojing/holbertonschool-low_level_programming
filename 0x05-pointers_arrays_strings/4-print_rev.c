@@ -23,6 +23,8 @@ for (stringcounter = 0; s[stringcounter] != '\0'; stringcounter++)
 	transfercounter = stringcounter;
 }
 
+stringcounter--;
+
 for (transfercounter = stringcounter; transfercounter >= 0; transfercounter--)
 {
 	_putchar(s[transfercounter]);
