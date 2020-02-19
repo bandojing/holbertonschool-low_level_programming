@@ -15,8 +15,8 @@
 char *_strcpy(char *dest, char *src)
 {
 
-	int src_counter;
-	int dest_counter;
+	int src_counter = 0;
+	int dest_counter = 0;
 
 
 	for (src_counter = 0; src[src_counter] != '\0'; src_counter++, dest_counter++)
