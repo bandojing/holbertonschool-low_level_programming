@@ -24,7 +24,7 @@ char *_strcpy(char *dest, char *src)
 		dest[dest_counter] = src[src_counter];
 	}
 
-	dest[dest_counter + 1] = '\0';
+	dest[dest_counter] = '\0';
 
 	return (dest);
 
