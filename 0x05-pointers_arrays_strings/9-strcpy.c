@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * _strcopy - copies one string into another
+ * _strcpy - copies one string into another
  * @dest: pointer to a char/string the destination of the copy
  * @src: pointer to a char/string the source of the copy
 (* a blank line
