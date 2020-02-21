@@ -24,13 +24,12 @@ void reverse_array(int *a, int n)
 	{
 		/*swap index values*/
 		swap = a[var];
-		a[var] = a[n - 1];
-		a[n - 1] = swap;
+		a[var] = a[n - var - 1];
+		a[n - var - 1] = swap;
 		/*increment the index values*/
 		/*decrement the index variable passed in*/
 
-		  n--;
-		 var++;
+		var++;
 	}
 
 }
