@@ -17,24 +17,24 @@ char *cap_string(char *capn)
 
 	for (counter = 0, oldchar = '0'; capn[counter] != '\0'; counter++)
 	{
-		if ( oldchar == ',' ||
-		     oldchar == ';' ||
-		     oldchar == '.'||
-		     oldchar == '!'||
-		     oldchar == 10||
-		     oldchar == 9 ||
-		     oldchar == ' '||
-		     oldchar == '{'||
-		     oldchar == '}'||
-		     oldchar == '(' ||
-		     oldchar == ')' ||
-		     oldchar == '"'||
-		     oldchar == '?' ||
-		     oldchar == '!' ||
-		     counter == 0)
+		if (oldchar == ','  ||
+		    oldchar == ';'  ||
+		    oldchar == '.' ||
+		    oldchar == '!' ||
+		    oldchar == 10 ||
+		    oldchar == 9  ||
+		    oldchar == ' ' ||
+		    oldchar == '{' ||
+		    oldchar == '}' ||
+		    oldchar == '(' ||
+		    oldchar == ')' ||
+		    oldchar == '"' ||
+		    oldchar == '?' ||
+		    oldchar == '!' ||
+		    counter == 0)
 		{
-	if (capn[counter] >= 'a' && capn[counter] <= 'z')
-		capn[counter] -= 32;
+			if (capn[counter] >= 'a' && capn[counter] <= 'z')
+				capn[counter] -= 32;
 		}
 		oldchar = capn[counter];
 	}
