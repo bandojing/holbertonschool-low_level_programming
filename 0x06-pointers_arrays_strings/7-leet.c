@@ -27,8 +27,7 @@ char *leet(char *leet)
 		{
 			if (letters[index] == leet[counter])
 			{
-
-			    leet[counter] = numbers[index];
+				leet[counter] = numbers[index];
 			}
 		}
 	}
