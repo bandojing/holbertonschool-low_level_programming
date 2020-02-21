@@ -16,7 +16,7 @@ char *rot13(char *rot13)
 char *letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char *encoded = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-*begin = rot13;
+char *begin = rot13;
 
 int itter;
 
