@@ -21,7 +21,7 @@ char *encoded = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 int itter;
 int first_itter;
 
-for (first_itter = 0; rot13[first_itter] != '\0';first_itter++)
+for (first_itter = 0; rot13[first_itter] != '\0'; first_itter++)
 {
 	for (itter = 0; letters[itter]; itter++)
 	{
