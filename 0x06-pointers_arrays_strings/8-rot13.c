@@ -10,27 +10,27 @@
 */
 
 
-char *rot13(char *rot)
+char *rot13(char *rot13)
 {
 
 char *letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char *encoded = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-char *begin = rot;
+/*char *begin = rot13;*/
 
 int itter;
-int counter;
+int first_itter;
 
-while (*(begin++))
+for (first_itter = 0; rot13[first_itter] != '\0';first_itter++)
 {
 	for (itter = 0; letters[itter]; itter++)
 	{
-		if (letters[itter] == *begin)
+		if (letters[itter] == rot13[first_itter])
 		{
-			*begin = encoded[itter];
+			rot13[first_itter] = encoded[itter];
 			break;
 		}
 	}
 }
-	return (rot);
+	return (rot13);
 }
