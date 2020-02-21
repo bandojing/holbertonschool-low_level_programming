@@ -10,15 +10,16 @@
 */
 
 
-char *rot13(char *rot13)
+char *rot13(char *rot)
 {
 
 char *letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char *encoded = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-char *begin = rot13;
+char *begin = rot;
 
 int itter;
+int counter;
 
 while (*(begin++))
 {
@@ -31,5 +32,5 @@ while (*(begin++))
 		}
 	}
 }
-	return (rot13);
+	return (rot);
 }
