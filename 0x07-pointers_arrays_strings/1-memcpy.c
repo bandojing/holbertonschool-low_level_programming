@@ -16,10 +16,10 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int memcop;
 
-	for (memcop = 0; memcop <= n; memcop++)
+	for (memcop = 0; memcop < n; memcop++)
 	{
 		dest[memcop] = src[memcop];
 	}
 
-	return (dest);
+         return (dest);
 }
