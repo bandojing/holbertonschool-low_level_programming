@@ -20,6 +20,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	{
 		dest[memcop] = src[memcop];
 	}
-
-         return (dest);
+	return (dest);
 }
