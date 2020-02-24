@@ -17,18 +17,21 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int counter1;
 	int counter2;
-	int bytecount;
+	/*int bytecount;*/
 
 
-	for (counter1 = 0; s[counter1] != ' '; counter1++)
+	for (counter1 = 0; s[counter1]/* != ' '*/; counter1++)
 	{
-		for (counter2 = 0; accept[counter2] != '\0'; counter2++)
+		for (counter2 = 0; accept[counter2] /*!= '\0'*/; counter2++)
 		{
 			if (s[counter1] == accept[counter2])
 			{
-				bytecount++;
+				break;
 			}
 		}
+		if (!accept[counter2])
+			break;
 	}
-	return (bytecount);
+	/*originally returned  bytecount here*/
+	return (counter1);
 }
