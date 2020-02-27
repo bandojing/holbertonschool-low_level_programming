@@ -17,16 +17,16 @@ int divisorfindor(int n, int divisor)
 		if (n % divisor == 0)
 			return (0);
 		return (divisorfindor(n, divisor + 1));
-			}
+	}
 
 		else if (n < 0 || n == 1)
 			return (0);
 		else
-			return (1);
+		return (1);
 }
 
 /**
- * _is_primt - this function determines if a number is prime
+ * is_prime_number - this function determines if a number is prime
  * @n: the number we are testing
 (* a blank line
 * Description:  a function that returns 1 if the input
