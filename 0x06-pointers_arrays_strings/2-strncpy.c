@@ -16,13 +16,13 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int copycounter = 0;
+	int copy = 0;
 
-	for (counter = 0; counter < n && *(src + counter) != '\0'; counter++)
-		*(dest + counter) = *(src + counter);
+	for (copy = 0; copy < n && *(src + copy) != '\0'; copy++)
+		*(dest + copy) = *(src + copy);
 
-	for ( ; counter < n; counter++)
-		*(dest + counter) = '\0';
+	for ( ; copy < n; copy++)
+		*(dest + copy) = '\0';
 
 	return (dest);
 }
