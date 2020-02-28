@@ -11,10 +11,10 @@
 */
 int main(int argc, char *argv[])
 {
-        int numbersentered;
+	int numbersentered;
 	int sum = 0;
 
-        for ( numbersentered = 0; numbersentered < argc; numbersentered++)
+	for (numbersentered = 0; numbersentered < argc; numbersentered++)
 	{
 		if (argv[numbersentered] < 48 || argv[numbersentered] > 57)
 		{
@@ -26,5 +26,5 @@ int main(int argc, char *argv[])
 	}
 	printf("%i", sum);
 
-        return (0);
+	return (0);
 }
