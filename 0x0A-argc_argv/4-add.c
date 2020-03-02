@@ -12,7 +12,20 @@
 int main(int argc, char *argv[])
 {
 	int numbersentered;
-	int sum = 0;
+	int sum;
+
+	if (isdigit(argv[numersentered]) == 0)
+		printf("0\n");
+
+	if (argc > 1)
+	{
+		for (numbersentered = 0; numbersentered < argc; numbersentered++)
+		{
+			sum += atoi(argv[numbersentered]);
+		}
+		printf("%d\n", sum);
+
+		return (0);
 
 	for (numbersentered = 0; numbersentered < argc; numbersentered++)
 	{
