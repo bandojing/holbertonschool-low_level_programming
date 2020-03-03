@@ -27,13 +27,12 @@ char *_strdup(char *str)
 		return (NULL);
 
 	/*find the size of the string*/
-/**
- *	while (str != '\0')
- *	{
- *		str++;
- *		indexnumber++;
- *	}
- */
+
+ 	while (str[indexnumber])
+ 	{
+ 		indexnumber++;
+ 	}
+
 	/*allocate memory for the new string*/
 	newstring = malloc(indexnumber * sizeof(char));
 
@@ -47,17 +46,9 @@ char *_strdup(char *str)
 		newstring[counter] = str[counter];
 	}
 
-	/*while loop to copy the string*/
+	newstring[counter] = '\0';
 
 
-
-/*	while (stringcopy < indexnumber)
- *	{
- *		newstring[stringcopy] = str[stringcopy];
- *		stringcopy++;
- *	}
- */
-	/*return pointer to the new string*/
 	return (newstring);
 
 
