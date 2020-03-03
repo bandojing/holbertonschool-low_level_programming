@@ -18,15 +18,26 @@ char *create_array(unsigned int size, char c)
 {
 
 	char *ali;
+	int arraycounter;
+
 	/*if size is equal to zero return 0*/
 	if (size == 0)
 		return (NULL);
-/*check to see if array is null*/
-	if (ali == NULL)
-		return (NULL);
 
 	/*malloc array of chars with size of size*/
-	ali = malloc(size * sizeof(c));
+	 ali = malloc(size * sizeof(char));
+
+
+/*check if array is NULL*/
+	 if (ali == NULL)
+		 return (NULL);
+
+	while( arraycounter < size)
+	{
+		ali[arraycounter] = c;
+
+		arraycounter++;
+	}
 
 	return (ali);
 
