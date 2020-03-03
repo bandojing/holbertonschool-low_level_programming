@@ -16,29 +16,35 @@
 
 char *create_array(unsigned int size, char c)
 {
-
 	char *ali;
-	int arraycounter;
+
+	/**
+	 * sonnyliston must be unsigned because
+	 * it will be compared to an unsigned
+	 * int later on
+	 */
+	unsigned int sonnyliston = 0;
 
 	/*if size is equal to zero return 0*/
 	if (size == 0)
 		return (NULL);
 
-	/*malloc array of chars with size of size*/
-	 ali = malloc(size * sizeof(char));
+	/**
+	 *dynamically create memory for the array
+	 *using malloc
+	 */
+	ali = malloc(size * sizeof(char));
 
+	/*check if array is NULL*/
+	if (ali == NULL)
+		return (NULL);
 
-/*check if array is NULL*/
-	 if (ali == NULL)
-		 return (NULL);
-
-	while( arraycounter < size)
+	/*while loop to fill the array with char c*/
+	while (sonnyliston < size)
 	{
-		ali[arraycounter] = c;
-
-		arraycounter++;
+		ali[sonnyliston] = c;
+		sonnyliston++;
 	}
 
 	return (ali);
-
 }
