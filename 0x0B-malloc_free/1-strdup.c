@@ -20,19 +20,20 @@ char *_strdup(char *str)
 	int indexnumber = 0;
 	/*pointer to copy of str*/
 	char *newstring;
-	/*int to hole size of new string*/
-	int stringcopy = 0;
+	int counter;
+
 
 	if (str == NULL)
 		return (NULL);
 
 	/*find the size of the string*/
-	while (str != '\0')
-	{
-		str++;
-		indexnumber++;
-	}
-
+/**
+ *	while (str != '\0')
+ *	{
+ *		str++;
+ *		indexnumber++;
+ *	}
+ */
 	/*allocate memory for the new string*/
 	newstring = malloc(indexnumber * sizeof(char));
 
@@ -40,18 +41,25 @@ char *_strdup(char *str)
 	if (newstring == NULL)
 		return (NULL);
 
-	/*while loop to copy the string*/
-	while (stringcopy < indexnumber)
+
+	for (counter = 0; str[counter] != '\0'; counter++)
 	{
-		newstring[stringcopy] = str[stringcopy];
-		stringcopy++;
+		newstring[counter] = str[counter];
 	}
 
+	/*while loop to copy the string*/
+
+
+
+/*	while (stringcopy < indexnumber)
+ *	{
+ *		newstring[stringcopy] = str[stringcopy];
+ *		stringcopy++;
+ *	}
+ */
 	/*return pointer to the new string*/
 	return (newstring);
 
-	/*free up the memory*/
-	/*free(newstring);*/
 
 
 }
