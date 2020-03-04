@@ -20,14 +20,27 @@ char *str_concat(char *s1, char *s2)
 	char *newstring;
 	int lengthofbothstrings;
 
+<<<<<<< HEAD
 	for (leng_s1 = 0; s1[leng_s1] != '\0'; leng_s1++)
 	{
 	}
+=======
+	/*int to hold size*/
+	int size = 0;
+	
+	int leng_s1, leng_s2;
+	
+	int size2 = 0;
+
+	/*int to hold length of destination string*/
+	/*int lengthsource = 0;*/
+>>>>>>> e56237ed34d6c43279bc01336bfa682808bff4c0
 
 	for (leng_s2 = 0; s2[leng_s2] != '\0'; leng_s2++)
 	{
 	}
 
+<<<<<<< HEAD
 	lengthofbothstrings = (leng_s1 + leng_s2) + 1;
 
 	newstring = malloc(lengthofbothstrings * sizeof(char));
@@ -36,13 +49,27 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	if (s1 != NULL)
+=======
+	/*int for length of both strings*/
+	int lengthofbothstrings;
+
+	/*find length of string*/
+	for (leng_s1 = 0; s1[leng_s1] != '\0'; leng_s1++)
+	{
+	}
+
+	/*find length of second string*/
+	for (leng_s2 = 0; s2[leng_s2] != '\0'; leng_s2++)
+>>>>>>> e56237ed34d6c43279bc01336bfa682808bff4c0
 	{
 		for (size = 0, size2 = 0; s1[size2] != '\0'; size++, size2++)
 		{
 			newstring[size] = s1[size2];
 		}
 	}
+	
 
+<<<<<<< HEAD
 	if (s2 != NULL)
 	{
 		for (size2 = 0; s2[size2] != '\0'; size2++, size++)
@@ -51,6 +78,34 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 	newstring[size] = '\0';
+=======
+	lengthofbothstrings = (leng_s1 + leng_s2) + 1;
+
+
+	newstring = malloc(lengthofbothstrings * sizeof(char));
+	if(newstring == NULL)
+	  return(NULL);
+
+	if(s1 != NULL)
+	  {
+	    for (size = 0, size2 = 0; s1[size2] != '\0'; size++,size2++ )
+	      {
+	    newstring[size] = s1[size2];
+	      }
+	  }
+
+	if(s2 !=NULL)
+	  {
+	    for (size2 = 0; s2[size2] != '\0'; size2++,size++)
+	  {
+	    newstring[size] = s2[size2];
+	  }
+	  }
+	
+	newstring[size] = '\0';
+
+	return (newstring);
+>>>>>>> e56237ed34d6c43279bc01336bfa682808bff4c0
 
 	return (newstring);
 }
