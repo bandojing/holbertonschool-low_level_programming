@@ -14,45 +14,43 @@
 
 char *str_concat(char *s1, char *s2)
 {
-
-	/*int to hold size*/
 	int size = 0;
-
-	/*int to hold length of destination string*/
-	int lengthsource = 0;
-
-	/*char pointer to hold new string*/
+	int leng_s1, leng_s2;
+	int size2 = 0;
 	char *newstring;
+	int lengthofbothstrings;
 
-	/*int for length of both strings*/
-	int lengthofbothstrings = lengthof_s1 + lengthof_s2;
+	for (leng_s1 = 0; s1[leng_s1] != '\0'; leng_s1++)
+	{
+	}
 
-	/*malloc to create space for the length of both strings*/
+	for (leng_s2 = 0; s2[leng_s2] != '\0'; leng_s2++)
+	{
+	}
+
+	lengthofbothstrings = (leng_s1 + leng_s2) + 1;
+
 	newstring = malloc(lengthofbothstrings * sizeof(char));
 
-	/*find length of string*/
-	for (lengthof_s1 = 0; dest[lengthof_s1] != '\0'; lengthof_s1++)
+	if (newstring == NULL)
+		return (NULL);
+
+	if (s1 != NULL)
 	{
+		for (size = 0, size2 = 0; s1[size2] != '\0'; size++, size2++)
+		{
+			newstring[size] = s1[size2];
+		}
 	}
 
-	/*find length of second string*/
-	for (lengthof_s2 = 0; s2[lengthof_s2] != '\0'; lengthof_s2++)
+	if (s2 != NULL)
 	{
+		for (size2 = 0; s2[size2] != '\0'; size2++, size++)
+		{
+			newstring[size] = s2[size2];
+		}
 	}
+	newstring[size] = '\0';
 
-	/**
-	 * while size is zero and size is less than the size that's passed in
-	 * and the size of the source is not equal to the null byte increase
-	 * the size
-	 */
-	for (size = 0; size < n && src[size] != '\0'; size++, lengthsource++)
-	{
-		dest[lengthsource + size] = src[size];
-	}
-	/*adds the null byte*/
-	dest[lengthsource + size] = '\0';
-
-	/*returns the new string*/
-	return (dest);
-
+	return (newstring);
 }
