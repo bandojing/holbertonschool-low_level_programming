@@ -2,17 +2,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * strdup - copies one string to another and returns pointer to copy
- * @grid: string passed in from outside will be copied into newstring
+ * free_grid - frees up space allocated to a 2d grid
+ * @grid: pointer to a pointer to a 2d grid
  * @height: height
 (* a blank line
-* Description:  a function that returns a pointer to a newly allocated
-* space in memory, which contains a copy of the string given as a parameter
+* Description: frees a 2d grid
+*
 (* section header: Section description)*
-* Return: returns copy of str
+* Return: void
 */
 
 void free_grid(int **grid, int height)
 {
 
+	int freecounter;
+
+	for (freecounter = 0; freecounter < height; freecounter++)
+	{
+
+		free(grid[freecounter]);
+		free(grid);
+	}
 }
