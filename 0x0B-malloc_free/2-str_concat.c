@@ -14,9 +14,9 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int size = 0;
+	int size;
 	int leng_s1, leng_s2;
-	int size2 = 0;
+	int size2;
 	char *newstring;
 	int lengthofbothstrings;
 
