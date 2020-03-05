@@ -18,6 +18,6 @@ void free_grid(int **grid, int height)
 	int freecount;
 
 	for (freecount = 0; freecount < height; freecount++)
-		free(grid[freecounter]);
-	free(grid);
+		free(gridmemory[freecounter]);
+	free(gridmemory);
 }
