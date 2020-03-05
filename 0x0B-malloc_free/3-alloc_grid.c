@@ -14,6 +14,7 @@
 
 int **alloc_grid(int width, int height)
 {
+<<<<<<< HEAD
   int rows;
   int cols;
   int **gridmemory;
@@ -44,5 +45,10 @@ int **alloc_grid(int width, int height)
 
   /*returns the pointer to the grid array filled with zeroes*/
   return (gridmememory);
+=======
+
+	if (width || height == 0)
+		return (NULL);
+>>>>>>> b5bb2fe0203c51d68bc1a9edd9ee677d442e30e3
 
 }
