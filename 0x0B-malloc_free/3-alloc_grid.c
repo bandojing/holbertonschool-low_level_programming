@@ -38,9 +38,7 @@ int **alloc_grid(int width, int height)
 
       /*for loop to fill in grid space with zeroes*/
       for(cols = 0; cols < width; cols++)
-	{
 	  gridmemory[rows][cols] = 0;
-	}
     }
 
   /*returns the pointer to the grid array filled with zeroes*/
