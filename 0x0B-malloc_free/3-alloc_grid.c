@@ -20,7 +20,7 @@ int **alloc_grid(int width, int height)
   int **gridmemory;
 
   /*first case if width and height are 0 or negative return null*/
-  if (width <= 0 || height <= 0)
+  if (width == 0 || height == 0)
     return(NULL);
 
   /*allocate memory based on the height aka rows*/
