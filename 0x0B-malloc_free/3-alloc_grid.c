@@ -33,7 +33,7 @@ int **alloc_grid(int width, int height)
     {
       /*checks if any of the rows are null*/
       gridmemmory[rows] = malloc(width * sizeof(int));
-      if (gridmemory[rows] == NULL);
+      if (gridmemory[rows] == NULL)
       return(NULL);
 
       /*for loop to fill in grid space with zeroes*/
@@ -44,7 +44,5 @@ int **alloc_grid(int width, int height)
   /*returns the pointer to the grid array filled with zeroes*/
   return (gridmememory);
 
-	if (width || height == 0)
-		return (NULL);
 
 }
