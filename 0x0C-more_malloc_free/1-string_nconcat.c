@@ -29,19 +29,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (leng2 = 0; s2[leng2] != '\0'; leng2++)
 			;
 
-	/*newstring = malloc((leng1 + leng2) * sizeof(char));*/
-	/*if (newstring == NULL)*/
-	/*return (NULL);*/
-
-	/*if s1 is not empty copy it to newstring*/
-	/*if (s1 != NULL)*/
-/**
- *	for( size1 = 0, size2 = 0; size2 < leng1; size1++, size2++)
- *	{
- *		newstring[size1] = s1[size2];
- *
- *}	if (s2 != NULL)
- */
 		if (n >= leng2)
 			n = leng2;
 
