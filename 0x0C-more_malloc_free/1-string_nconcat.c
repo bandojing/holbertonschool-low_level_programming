@@ -6,6 +6,7 @@
  * string_nconcat - a function that concactenates two strings
  * @s1: first string passed in
  * @s2: second string passed in
+ * @n: will be used to determine length of s2 to be copied
 (* a blank line
 * Description: a function that concatenates two strings
 (* section header: Section description)*
@@ -13,7 +14,7 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-        unsigned int leng1;
+	unsigned int leng1;
 	unsigned int leng2;
 	/*unsigned int sumleng;*/
 	char *newstring;
