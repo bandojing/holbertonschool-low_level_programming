@@ -28,21 +28,33 @@ int **alloc_grid(int width, int height)
   if (gridmemory == NULL)
     return(NULL);
 
-  /*nested for loop to build a grid from 2d array*/
+  /*if rows null frees up memory*/
   for (rows = 0; rows < height; rows++)
     {
       /*checks if any of the rows are null*/
-      gridmemmory[rows] = malloc(width * sizeof(int));
+      gridmemory[rows] = malloc(width * sizeof(int));
       if (gridmemory[rows] == NULL)
-      return(NULL);
+	{ 
+	  for (cols = 0; cols < width; cols++)
+	    free(gridmemory[cols]);
+	  free(gridmemory);
+	  return (NULL);
+	}
+    }
+
+  for (rows = 0; rows < height; rows++)
+    {
 
       /*for loop to fill in grid space with zeroes*/
       for(cols = 0; cols < width; cols++)
+	{
 	  gridmemory[rows][cols] = 0;
+	}
     }
+    
 
   /*returns the pointer to the grid array filled with zeroes*/
-  return (gridmememory);
+  return (gridmemory);
 
 
 }
