@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * strdup - copies one string to another and returns pointer to copy
+ * _strdup - copies one string to another and returns pointer to copy
  * @str: string passed in from outside will be copied into newstring
 (* a blank line
 * Description:  a function that returns a pointer to a newly allocated
@@ -15,42 +15,32 @@
 
 char *_strdup(char *str)
 {
-
-	/*create index counter to find size of string*/
 	int indexnumber = 0;
-	/*pointer to copy of str*/
 	char *newstring;
-	int counter;
-
+	char *string;
 
 	if (str == NULL)
 		return (NULL);
 
-	/*find the size of the string*/
+	while (str[indexnumber] != '\0')
+		indexnumber++;
+	indexnumber++;
 
- 	while (str[indexnumber])
- 	{
- 		indexnumber++;
- 	}
+	newstring = (char *)malloc(sizeof(char) * indexnumber);
 
-	/*allocate memory for the new string*/
-	newstring = malloc(indexnumber * sizeof(char));
-
-	/*return null if malloc fails*/
 	if (newstring == NULL)
 		return (NULL);
 
+	string = newstring;
 
-	for (counter = 0; str[counter] != '\0'; counter++)
+	while (*str)
 	{
-		newstring[counter] = str[counter];
+		*string = *str;
+		string++;
+		str++;
 	}
 
-	newstring[counter] = '\0';
-
+	*string = '\0';
 
 	return (newstring);
-
-
-
 }
