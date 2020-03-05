@@ -2,6 +2,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 /**
  * malloc_checked -  a function that allocates memory using malloc
  * @b: an unsigned int passed into the function
@@ -15,7 +16,7 @@ void *malloc_checked(unsigned int b)
 
 	unsigned int *mem;
 
-	mem = malloc(b * sizedof(unsigned int));
+	mem = malloc(b * sizeof(unsigned int));
 	if (mem == NULL)
 		exit(98);
 
