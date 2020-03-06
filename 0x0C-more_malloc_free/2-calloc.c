@@ -30,7 +30,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	elements = 0;
 	while (elements < nmemb * size)
 	{
-		callocarray[elements] = '0';
+		callocarray[elements] = 0;
 		elements++;
 	}
 
