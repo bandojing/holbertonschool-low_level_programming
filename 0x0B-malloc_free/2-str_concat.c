@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * strdup - copies one string to another and returns pointer to copy
+ * str_concat - copies one string to another and returns pointer to copy
  * @s1: string passed in from outside will be copied into newstring
  * @s2: second string
 (* a blank line
