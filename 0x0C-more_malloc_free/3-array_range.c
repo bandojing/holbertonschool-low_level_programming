@@ -22,13 +22,10 @@ int *array_range(int min, int max)
 	if (newarray == NULL)
 		return (NULL);
 
-arrayindex = 0;
 
-while (min <= (max - min))
+for (arrayindex = 0; arrayindex <= (max - min); arrayindex++)
 {
-	newarray[arrayindex] = min + 1;
-
-	arrayindex++;
+	newarray[arrayindex] = min + arrayindex;
 }
 
 return (newarray);
