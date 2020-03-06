@@ -15,8 +15,8 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int elements;
-	int *callocarray;
-	unsigned int totalsize;
+	char *callocarray;
+	/*unsigned int totalsize;*/
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -26,11 +26,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (callocarray == NULL)
 		return (NULL);
 
-	totalsize = nmemb * size;
+	/*totalsize = nmemb * size;*/
 	elements = 0;
-	while (elements < totalsize)
+	while (elements < nmemb * size)
 	{
-		callocarray[elements] = 0;
+		callocarray[elements] = '0';
 		elements++;
 	}
 
