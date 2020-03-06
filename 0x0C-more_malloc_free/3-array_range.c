@@ -24,7 +24,7 @@ int *array_range(int min, int max)
 
 arrayindex = 0;
 
-while (min <= max - min)
+while (min <= (max - min))
 {
 	newarray[arrayindex] = min + 1;
 
