@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "dog.h"
 /**
  * init_dog - a function that initialize a variable of type struct dog
  * @d: pointer to name of structure dog
@@ -15,23 +15,11 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-
-
-/**
- * struct dog - struct with three members
- * @name: First member
- * @age: Second member
- * @owner: Third member
- *
- * Description: struct dog a structure with members n\
-ame age owner
-*/
-struct dog
-{
-        char *name;
-        float age;
-        char *owner;
-};
+	if (d == NULL)
+		return (NULL);
+	d -> name = name;
+	d -> age = age;
+	d -> owner = owner;
 
 
 
