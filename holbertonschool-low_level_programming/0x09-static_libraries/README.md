@@ -1,0 +1,1 @@
+readme for section 0x08 c-static libraries, where I will be building a static library from previously written functions.

@@ -1,0 +1,1 @@
+readme for 0x0A C-argc,argv and contains programs using argc and argv for output
