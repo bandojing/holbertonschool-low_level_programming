@@ -12,7 +12,7 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 
-	while ()
+	while (ops[i]->f != NULL)
 	{
 
 		if (s
