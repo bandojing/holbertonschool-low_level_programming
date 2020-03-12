@@ -33,4 +33,5 @@ int (*get_op_func(char *s))(int, int)
 			return (ops[struct_counter].f);
 		struct_counter++;
 	}
+	return (NULL);
 }
