@@ -29,8 +29,10 @@ int main(int argc, char *argv[])
 	getoperation = get_op_func(argv[2]);
 
 	if (*getoperation == NULL)
+	{
 		printf("Error\n");
-	exit(99);
+		exit(99);
+	}
 
 	secondnumber = atoi(argv[3]);
 
