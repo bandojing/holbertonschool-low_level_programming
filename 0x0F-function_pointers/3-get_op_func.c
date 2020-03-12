@@ -30,7 +30,7 @@ int (*get_op_func(char *s))(int, int)
 	while (struct_counter < 5)
 	{
 
-		if (*ops[struct_counter] == *s && s[struct_counter])
+		if (*ops[struct_counter] == *s && s[1] == '\0')
 			return (ops[struct_counter].f);
 		struct_counter++;
 	}
