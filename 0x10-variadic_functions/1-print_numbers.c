@@ -3,7 +3,14 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
-
+/**
+ * function_name - Short description, single line
+ * @parameterx: Description of parameter x
+(* a blank line
+* Description: Longer description of the function)?
+(* section header: Section description)*
+* Return: Description of the returned value
+*/
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 
@@ -13,15 +20,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(numberstoprint, n);
 
-	if (separator == NULL)
+	for (loop = 0; loop < n; loop++)
 	{
-	for (loop = n; loop < n; loop++)
-	{
-		printf("%i", va_arg(numberstoprint, int));
+		printf("%i", va_arg(numberstoprint, unsigned int));
+
+		if (separator != NULL && loop < n - 1)
+			printf("%s", separator);
+
+
 	}
-	}	
-	else
-		printf("%s", separator);
 
 		va_end(numberstoprint);
 
