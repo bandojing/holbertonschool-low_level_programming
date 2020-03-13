@@ -23,7 +23,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (argloop = 0; argloop < n; argloop++)
 	{
-		if (va_arg(list,char *) == NULL)
+		if (va_arg(list, n) == NULL)
 			printf("(nil)");
 		else
 /*prnts out any char strings found in the list*/
