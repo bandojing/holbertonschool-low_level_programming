@@ -1,3 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "3-calc.h"
+/**
+ * get_op_func -  the function that selects the correct function to
+ * perform the operation asked by the user
+ * @s: the string passed in from the user
+(* a blank line
+* Description: function that selects a function to perform the operation
+* asked by the user
+(* section header: Section description)*
+* Return: returns an integer
+*/
 int (*get_op_func(char *s))(int, int)
 {
 
@@ -9,12 +22,16 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+
+	int struct_counter = 0;
 
 
-	while (ops[i]->f != NULL)
+	while (struct_counter < 5)
 	{
 
-		if (s
+		if (*ops[struct_counter].op == *s && s[1] == '\0')
+			return (ops[struct_counter].f);
+		struct_counter++;
 	}
+	return (NULL);
 }
