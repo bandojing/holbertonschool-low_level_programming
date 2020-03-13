@@ -7,8 +7,8 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list numtoadd;
-	 int argloop;
-	int sum = 0;
+	unsigned int argloop;
+	unsigned int sum = 0;
 
 	if (n == 0)
 		return (0);
@@ -16,10 +16,10 @@ int sum_them_all(const unsigned int n, ...)
 
 	va_start(numtoadd, n);
 
-	for (argloop = n; argloop >= 0; argloop = va_arg(numtoadd, const unsigned int))
-	{
-		sum += argloop;
+	for (argloop = n; argloop < n; argloop++)
+
+		sum = sum + va_arg(numtoadd, int);
 		va_end(numtoadd);
-	}
-	return(sum);
+		return(sum);
+
 }
