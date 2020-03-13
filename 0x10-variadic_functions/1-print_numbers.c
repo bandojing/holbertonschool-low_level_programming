@@ -4,12 +4,13 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
- * function_name - Short description, single line
- * @parameterx: Description of parameter x
+ * print_numbers -  a function that prints numbers, followed by a new line
+ * @separator: char that separates numbers being printed
+ * @n: numbers that will be printed
 (* a blank line
-* Description: Longer description of the function)?
+* Description: a function that prints numbers, followed by a new line
 (* section header: Section description)*
-* Return: Description of the returned value
+* Return: returns void
 */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
