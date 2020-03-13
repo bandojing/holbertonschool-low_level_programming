@@ -3,7 +3,14 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
-
+/**
+ * sum_them_all - a function that returns the sum of all its parameters
+ * @n: integers passed into function
+(* a blank line
+* Description: a function that returns the sum of all its parameters
+(* section header: Section description)*
+* Return: returns sum of all integers in list
+*/
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list numtoadd;
