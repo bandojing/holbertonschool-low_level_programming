@@ -29,7 +29,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		/*if (va_arg(list, char *) != NULL)*/
 
 		copy = va_arg(list, char *);
-		if (n == '\0')
+		if (copy  == NULL)
+			/*if ( n == '\0')*/
 			printf("(nil)");
 
 		if ( copy /*va_arg(list, char *)*/ != NULL)
