@@ -15,18 +15,37 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list printsanything;
-	unsigned int looper;
+
+		va_list print;
+
+		va_start (print, format);
 
 
-	va_start(printsanything, format);
-
-
-	while (format)
-	{
-		printf("%s", va_arg(printsanything, char *);
-	}
-
-	va_end(printsanything);
+		while ( va_arg(print, format) != '\0')
+		{
+			switch (format)
+			{
+			case 'c':
+				char c = va_arg(print, format);
+				/*convert va_arg to char*/
+				/*printf %c va_arg*/
+			case 'i':
+				/*convert to int and printf*/
+				int i = va_arg(print, format);
+			case 'f':
+				/*convert to float print %f*/
+				float f = va_arg(print, format);
+			case 's':
+				/*convert to char * * print %c*/
+				/* if char * == NULL print nil*/
+				char *s = va_arg(print, format);
+				if ( s == NULL)
+					printf("(nil)");
+			default:
+				printf("");
+			}
+		}
+		printf("\n");
+		va_end(print);
 
 }
