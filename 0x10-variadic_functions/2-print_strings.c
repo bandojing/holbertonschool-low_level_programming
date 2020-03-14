@@ -16,7 +16,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list list;
 	unsigned int argloop;
-
+	char *copy;
 
 	va_start(list, n);
 
@@ -27,10 +27,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			/*printf("(nil)");*/
 /*prnts out any char strings found in the list*/
 		/*if (va_arg(list, char *) != NULL)*/
+
+		copy = va_arg(list, char *);
 		if (n == '\0')
 			printf("(nil)");
 
-			printf("%s", va_arg(list, char *));
+		if ( copy /*va_arg(list, char *)*/ != NULL)
+			printf("%s", copy /*va_arg(list, char *)*/);
 
 		if (separator != NULL && argloop <  n - 1)
 			printf("%s", separator);
