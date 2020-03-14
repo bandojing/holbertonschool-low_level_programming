@@ -28,7 +28,7 @@ int sum_them_all(const unsigned int n, ...)
 		sum = sum + va_arg(numtoadd, int);
 	}
 		va_end(numtoadd);
-		return(sum);
+		return (sum);
 }
 /* initialize vars for the va_list, unsigned int for loop counter*/
 /* unsigned int for the sum*/
