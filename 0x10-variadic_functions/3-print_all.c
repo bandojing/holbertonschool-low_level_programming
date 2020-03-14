@@ -18,33 +18,39 @@ void print_all(const char * const format, ...)
 
 		va_list print;
 
+		unsigned int looper;
+
 		va_start(print, format);
 
-
+		looper = 0;
 		while (va_arg(print, format) != '\0')
 		{
-			switch (format)
+			switch (format[looper])
 			{
 			case 'c':
-				char c = va_arg(print, format);
+				/*char c = va_arg(print, char);*/
 				/*convert va_arg to char*/
-				/*printf %c va_arg*/
+				printf("%c", va_arg(print, int));
 			case 'i':
 				/*convert to int and printf*/
-				int i = va_arg(print, format);
+				/*int i = va_arg(print, int);*/
+				printf("%i", va_arg(print, int));
 			case 'f':
 				/*convert to float print %f*/
-				float f = va_arg(print, format);
+				/*float f = va_arg(print, float);*/
+				printf("%f", va_arg(print, float));
 			case 's':
 				/*convert to char * * print %c*/
 				/* if char * == NULL print nil*/
-				char *s = va_arg(print, format);
+				/*char *s = va_arg(print, s);*/
+				printf("%s", va_arg(print, char *));
 
-				if (s == NULL)
+				if (char * == NULL)
 					printf("(nil)");
 			default:
 				printf("");
 			}
+			looper++;
 		}
 		printf("\n");
 		va_end(print);
