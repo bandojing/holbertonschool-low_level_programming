@@ -45,3 +45,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_end(list);
 
 }
+/*create va_list list, unsigned in argloop for loop counter*/
+/*decided to create char pointer to copy the char in the list to*/
+/*start the list*/
+/*start the for loop to iterate through the list*/
+/*place value of va_arg(list, char *) in copy*/
+/*if copy is null print nill*/
+/*if copy is not null print it out*/
+/*if the separator exists and the loop is less than n-1 print the separator*/
+/*this works because "," , 2, "john", "django" means separator there are 2 items*/
+/*in the list so john is first then django is second so as long as argloop is*/
+/*less than one will it print: john, django*/
+/*if there were three items it would print: item1, item2, item3 (no , here)*/
