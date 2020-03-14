@@ -5,12 +5,12 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - a function that returns the sum of all its parameters
- * @n: integers passed into function
+ * print_all - a function that prints anything.
+ * @format: a const char * used to initialize the list
 (* a blank line
-* Description: a function that returns the sum of all its parameters
+* Description: a function that prints anything
 (* section header: Section description)*
-* Return: returns sum of all integers in list
+* Return: returns void
 */
 
 void print_all(const char * const format, ...)
@@ -18,10 +18,10 @@ void print_all(const char * const format, ...)
 
 		va_list print;
 
-		va_start (print, format);
+		va_start(print, format);
 
 
-		while ( va_arg(print, format) != '\0')
+		while (va_arg(print, format) != '\0')
 		{
 			switch (format)
 			{
@@ -39,7 +39,8 @@ void print_all(const char * const format, ...)
 				/*convert to char * * print %c*/
 				/* if char * == NULL print nil*/
 				char *s = va_arg(print, format);
-				if ( s == NULL)
+
+				if (s == NULL)
 					printf("(nil)");
 			default:
 				printf("");
@@ -49,3 +50,16 @@ void print_all(const char * const format, ...)
 		va_end(print);
 
 }
+/* this function prints anything that is in variable list*/
+/* create a va_list variable called print*/
+/*start the list from the first item using Va_start(print, format)*/
+/* check to see if anything in the list is not a null byte aka blank*/
+/* switch cases for what is in the list*/
+/* if c then convert the va_arg(print, format) to a char then print*/
+/* if i then convert the va_arg(print, format) to int then print*/
+/* if f then convert the va_arg(print, format) to float then print*/
+/* if s then convert the va_arg(print, format) to a char*/
+/* char * means it's a string. then print*/
+/* anything else is ignored, the default is to print nothing*/
+/* print a newline*/
+/* end the list with va_end*/
