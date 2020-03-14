@@ -53,7 +53,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 /*if copy is null print nill*/
 /*if copy is not null print it out*/
 /*if the separator exists and the loop is less than n-1 print the separator*/
-/*this works because "," , 2, "john", "django" means separator there are 2 items*/
-/*in the list so john is first then django is second so as long as argloop is*/
-/*less than one will it print: john, django*/
+/*this works because "," , 2, "john", "django" means separator there are 2*/
+/*items in the list so john is first then django is second so as long as*/
+/*argloop is less than one will it print: john, django*/
 /*if there were three items it would print: item1, item2, item3 (no , here)*/
