@@ -27,6 +27,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			/*printf("(nil)");*/
 /*prnts out any char strings found in the list*/
 		/*if (va_arg(list, char *) != NULL)*/
+		if (n == '\0')
+			printf("(nil)");
+
 			printf("%s", va_arg(list, char *));
 
 		if (separator != NULL && argloop <  n - 1)
