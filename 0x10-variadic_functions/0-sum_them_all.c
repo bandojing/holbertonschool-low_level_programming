@@ -17,11 +17,11 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int argloop;
 	unsigned int sum = 0;
 
-	if (n == 0)
-		return (0);
-
 
 	va_start(numtoadd, n);
+
+	if (n == 0)
+		return (0);
 
 	for (argloop = 0; argloop < n; argloop++)
 	{
@@ -30,3 +30,11 @@ int sum_them_all(const unsigned int n, ...)
 		va_end(numtoadd);
 		return(sum);
 }
+/* initialize vars for the va_list, unsigned int for loop counter*/
+/* unsigned int for the sum*/
+/* start the list*/
+/* check if n is 0 return 0*/
+/* start the loop to go through the list*/
+/* the sum is equal to sum plus the int found in the list*/
+/* end the list*/
+/* return the sum*/
