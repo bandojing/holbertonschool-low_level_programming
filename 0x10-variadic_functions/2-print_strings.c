@@ -23,13 +23,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (argloop = 0; argloop < n; argloop++)
 	{
-		if (va_arg(list, n) == NULL)
-			printf("(nil)");
-		else
+		/*if ((va_arg(list, char *)) == NULL)*/
+			/*printf("(nil)");*/
 /*prnts out any char strings found in the list*/
-		printf("%s", va_arg(list, char *));
+		/*if (va_arg(list, char *) != NULL)*/
+			printf("%s", va_arg(list, char *));
 
-		if (separator != NULL && argloop < n - 1)
+		if (separator != NULL && argloop <  n - 1)
 			printf("%s", separator);
 	}
 
