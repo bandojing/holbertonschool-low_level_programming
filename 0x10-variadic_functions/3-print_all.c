@@ -17,33 +17,43 @@ void print_all(const char * const format, ...)
 {
 
 		va_list print;
-
 		unsigned int looper;
-
 		va_start(print, format);
-
+		char *p_format = NULL;
 		looper = 0;
-		while (va_arg(print, format) != '\0')
+		p_format = va_arg(print, format);
+
+		while (copy[index] = '\0')
 		{
-			switch (format[looper])
+			switch (copy[index])
 			{
 			case 'c':
 				/*char c = va_arg(print, char);*/
 				/*convert va_arg to char*/
-				printf("%c", va_arg(print, int));
+				char c = va_arg(print, char);
+
+				printf("%c", c);
+				index++;
+				break;
 			case 'i':
 				/*convert to int and printf*/
-				/*int i = va_arg(print, int);*/
-				printf("%i", va_arg(print, int));
+				int i = va_arg(print, int);
+
+				printf("%i", i);
+				break;
 			case 'f':
 				/*convert to float print %f*/
-				/*float f = va_arg(print, float);*/
-				printf("%f", va_arg(print, float));
+				float f = va_arg(print, float);
+
+				printf("%f", f);
+				break;
 			case 's':
 				/*convert to char * * print %c*/
 				/* if char * == NULL print nil*/
-				/*char *s = va_arg(print, s);*/
-				printf("%s", va_arg(print, char *));
+				char *p_s = va_arg(print, char *);
+
+				printf("%s", p_s);
+				break;
 
 				if (char * == NULL)
 					printf("(nil)");
