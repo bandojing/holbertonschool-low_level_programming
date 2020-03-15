@@ -17,50 +17,48 @@ void print_all(const char * const format, ...)
 {
 
 		va_list print;
-		unsigned int looper;
-		va_start(print, format);
-		char *p_format = NULL;
-		looper = 0;
-		p_format = va_arg(print, format);
+		unsigned int index;
+		char c;
+		int i;
+                float f;
+		char *p_s;
 
-		while (copy[index] = '\0')
+		while (format != NULL)
 		{
-			switch (copy[index])
+			switch (format[index])
 			{
 			case 'c':
 				/*char c = va_arg(print, char);*/
 				/*convert va_arg to char*/
-				char c = va_arg(print, char);
+				c = va_arg(print, int);
+				/*3-print_all.c:34:23: error: ‘char’ is promoted to ‘int’ when passed through ‘...’ [-Werror]
+				  c = va_arg(print, char);*/
 
 				printf("%c", c);
-				index++;
 				break;
 			case 'i':
 				/*convert to int and printf*/
-				int i = va_arg(print, int);
+				i = va_arg(print, int);
 
 				printf("%i", i);
 				break;
 			case 'f':
 				/*convert to float print %f*/
-				float f = va_arg(print, float);
+			        f = va_arg(print, double /*float*/);
 
 				printf("%f", f);
 				break;
 			case 's':
 				/*convert to char * * print %c*/
 				/* if char * == NULL print nil*/
-				char *p_s = va_arg(print, char *);
-
+				p_s = va_arg(print, char *);
+				if (p_s == NULL)
+                                        printf("(nil)");
 				printf("%s", p_s);
 				break;
 
-				if (char * == NULL)
-					printf("(nil)");
-			default:
-				printf("");
 			}
-			looper++;
+			index++;
 		}
 		printf("\n");
 		va_end(print);
