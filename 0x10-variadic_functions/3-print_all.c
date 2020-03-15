@@ -15,55 +15,62 @@
 
 void print_all(const char * const format, ...)
 {
-
 		va_list print;
-		unsigned int index;
+		unsigned int iterator;
 		char c;
 		int i;
-                float f;
+		float f;
 		char *p_s;
+
+		va_start(print, format);
 
 		while (format != NULL)
 		{
-			switch (format[index])
+			switch (format[iterator])
 			{
 			case 'c':
-				/*char c = va_arg(print, char);*/
-				/*convert va_arg to char*/
 				c = va_arg(print, int);
-				/*3-print_all.c:34:23: error: ‘char’ is promoted to ‘int’ when passed through ‘...’ [-Werror]
-				  c = va_arg(print, char);*/
-
 				printf("%c", c);
 				break;
 			case 'i':
-				/*convert to int and printf*/
 				i = va_arg(print, int);
-
 				printf("%i", i);
 				break;
 			case 'f':
-				/*convert to float print %f*/
-			        f = va_arg(print, double /*float*/);
-
+				f = va_arg(print, double);
 				printf("%f", f);
 				break;
 			case 's':
-				/*convert to char * * print %c*/
-				/* if char * == NULL print nil*/
 				p_s = va_arg(print, char *);
-				if (p_s == NULL)
-                                        printf("(nil)");
-				printf("%s", p_s);
+				switch (p_s == NULL)
+				{
+				case 1:
+					printf("(nil)");
+					break;
+				case 0:
+					printf("%s", p_s);
+					break;
+				}
 				break;
-
 			}
-			index++;
+			iterator++;
 		}
 		printf("\n");
 		va_end(print);
-
 }
+/*comments moved from code because of line count limits*/
+/*after case cchar c = va_arg(print, char);*/
+/*convert va_arg to char*/
+/*3-print_all.c:34:23: error: ‘char’ is promoted to ‘int’*/
+/* when passed through*/
+/*‘...’ [-Werror c = va_arg(print, char);*/
+/*after case i convert to int and printf*/
+/*after case f convert to float print %f*/
+/* after s convert to char * * print %c*/
+/* if char * == NULL print nil*/
+/*end of comments removed from the code because of line count limits*/
+
+
 /* this function prints anything that is in variable list*/
 /* create a va_list variable called print*/
 /*start the list from the first item using Va_start(print, format)*/
