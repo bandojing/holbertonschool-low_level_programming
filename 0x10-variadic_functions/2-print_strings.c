@@ -34,7 +34,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nil)");
 
 		if (p_copy /*va_arg(list, char *)*/ != NULL)
-			printf("%s",p_copy /*va_arg(list, char *)*/);
+			printf("%s", p_copy /*va_arg(list, char *)*/);
 
 		if (separator != NULL && argloop <  n - 1)
 			printf("%s", separator);
