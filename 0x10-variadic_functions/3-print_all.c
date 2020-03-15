@@ -21,13 +21,19 @@ void print_all(const char * const format, ...)
 		int i;
 		float f;
 		char *p_s;
+		const char *p_formatcopy;
+		p_formatcopy = format;
 
 		va_start(print, format);
 
-		while (format != NULL)
+		while (/*format*/ *p_formatcopy != '\0'/* NULL*/)
 		{
-			switch (format[iterator])
+			switch (*++p_formatcopy /*format[iterator]*/)
 			{
+
+			case '%':
+				putchar('%');
+				break;
 			case 'c':
 				c = va_arg(print, int);
 				printf("%c", c);
