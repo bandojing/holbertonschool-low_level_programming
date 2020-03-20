@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * list_len - returns number of elements in a linked list
  * @h: pointer to struct
@@ -8,7 +9,7 @@
 */
 size_t list_len(const list_t *h)
 {
-	int memberamount = 0;
+	size_t  membercount = 0;
 	list_t *headcount = head;
 
 	while (headcount != NULL)
