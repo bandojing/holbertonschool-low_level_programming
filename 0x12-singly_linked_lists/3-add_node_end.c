@@ -9,16 +9,34 @@
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *headcopy = head;
+	/*new node with value of head node*/
+	list_t *pheadcopy = head;
 
-	while (headcopy->next != NULL)
-		headcopy = headcopy->next;
+	/*while the copy of head doesn't point to null*/
+	/*make the next node the current node*/
+	while (pheadcopy->next != NULL)
+		pheadcopy = pheadcopy->next;
 
-	list_t *new = create(str, NULL);
+	/*creat a pointer to a string use strdup*/
+	/*copy the string passed in to the new string*/
+	char *pstrcopy = strdup(str);
 
-	headcopy->next = new;
+	/*creat a new node containing a copy of the string*/
+	/*and a pointer to null*/
+	list_t *pnew = create(pstrcopy, NULL);
 
-	return (headcopy);
+	/*if the new node is null return null*/
+	if (pnew == NULL)
+	{
+		return (NULL);
+	}
+	else
+		/*else make the new node the end node*/
+		pheadcopy->next = pnew;
+
+	/*return the address of the new node*/
+	return (&pheadcopy);
+
 }
 /*create new struct called headcopy and copy the struct head into it*/
 /*while the second half of the node does not point to null*/
