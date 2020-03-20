@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "lists.h"
 /**
  * print_list - prints all the elements of list_t list
  * @h: pointer to struct passed into function
@@ -19,7 +19,7 @@ size_t print_list(const list_t *h)
 			printf("[0] (nil)\n");
 		}
 		else
-			printf("[%u] %s\n", h->len, h->str);
+			printf("[%d] %s\n", h->len, h->str);
 
 		h = h->next;
 
