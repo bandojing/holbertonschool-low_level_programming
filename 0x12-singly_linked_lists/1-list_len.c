@@ -9,15 +9,15 @@
 */
 size_t list_len(const list_t *h)
 {
-	size_t  membercount = 0;
-	list_t *headcount = head;
+	size_t  count = 0;
 
-	while (headcount != NULL)
+	while (h != NULL)
 	{
-		membercount++;
-		headcount = headcount->next;
+		count++;
+		h = h->next;
+		
 	}
-	return (membercount);
+	return (count);
 }
 /*first int to count the elements in the list is made*/
 /*a pointer to a struct is made it copies the head of the list*/
