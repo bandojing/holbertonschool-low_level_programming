@@ -17,30 +17,36 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	char *duplistring = strdup(str);
 
-	pnewnode = malloc(sizeof(list_t));
+	if (str == NULL)
+		return (NULL);
 
-	if (pnewnode == NULL || str == NULL)
+	pendingnode = malloc(sizeof(list_t));
+
+	if (pendingnode == NULL)
 		return (NULL);
 
 	while (str[stringlength] != '\0')
 		stringlength++;
 
-	pnewnode->str = duplistring;
-	pnewnode->len = stringlength;
-	pnewnode->next = NULL;
+	pendingnode->str = duplistring;
+	pendingnode->len = stringlength;
+	pendingnode->next = NULL;
+	/*got seg fault for not including this line below*/
+	pnewnode = *head;
 
 	if (*head == NULL)
 	{
-		*head = pnewnode;
-		return (pnewnode);
+		*head = pendingnode;
+		return (pendingnode);
 	}
 
-	while (pendingnode->next != NULL)
-		pendingnode = pendingnod->next;
-		pendingnode->next = pnewnode;
+	while (pnewnode->next != NULL)
+		pnewnode = pnewnode->next;
+		pnewnode->next = pendingnode;
 
-		return (pnewnode);
+		return (pendingnode);
 }
+/*remember that the node that will be the new end will need to be filled*/
 /*setup two structs one new one and one to attach to the end*/
 /*int for the stringlength = 0;*/
 /*duplicate the str passed in*/
