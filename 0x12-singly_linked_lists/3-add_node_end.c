@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * add_node_end - adds a new node to the end of a linked list
  * @head: a double pointer to the head of a list
@@ -9,39 +10,49 @@
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	/*new node with value of head node*/
-	list_t *pheadcopy = head;
+	list_t *pnewnode;
+	list_t *pendingnode;
 
-	/*while the copy of head doesn't point to null*/
-	/*make the next node the current node*/
-	while (pheadcopy->next != NULL)
-		pheadcopy = pheadcopy->next;
+	int stringlength = 0;
 
-	/*creat a pointer to a string use strdup*/
-	/*copy the string passed in to the new string*/
-	char *pstrcopy = strdup(str);
+	char *duplistring = strdup(str);
 
-	/*creat a new node containing a copy of the string*/
-	/*and a pointer to null*/
-	list_t *pnew = create(pstrcopy, NULL);
+	pnewnode = malloc(sizeof(list_t));
 
-	/*if the new node is null return null*/
-	if (pnew == NULL)
-	{
+	if (pnewnode == NULL || str == NULL)
 		return (NULL);
+
+	while (str[stringlength] != '\0')
+		stringlength++;
+
+	pnewnode->str = duplistring;
+	pnewnode->len = stringlength;
+	pnewnode->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = pnewnode;
+		return (pnewnode);
 	}
-	else
-		/*else make the new node the end node*/
-		pheadcopy->next = pnew;
 
-	/*return the address of the new node*/
-	return (&pheadcopy);
+	while (pendingnode->next != NULL)
+		pendingnode = pendingnod->next;
+		pendingnode->next = pnewnode;
 
+		return (pnewnode);
 }
-/*create new struct called headcopy and copy the struct head into it*/
-/*while the second half of the node does not point to null*/
-/*continue to copy the next nodes and attache them*/
-/*headcopy -> next headcopy->next headcopy->next until ->null*/
-/*create a struct called new*/
-/*adds the string passed in and a pointer to null to the new node*/
-/*when headcopy->next equals null attach the new node to the end*/
+/*setup two structs one new one and one to attach to the end*/
+/*int for the stringlength = 0;*/
+/*duplicate the str passed in*/
+/*create space for a new node with malloc*/
+/*if the newnode is null or the str is null return null*/
+/*while the string passed in is not a the null byte*/
+/*copy the string to the str member of the struct*/
+/*copy the length to the len member of the struct*/
+/*make the new node point to null since its going to be the last one*/
+/*if the head node is not there or pointing to null*/
+/*the new node becomes the head (newnode->next---->oldnode->null)*/
+/*while the endingnod does not point to null*/
+/*traverse the list until the last node*/
+/*once it is null make the last node point to the new node*/
+/*so the new node we made is the last one*/
