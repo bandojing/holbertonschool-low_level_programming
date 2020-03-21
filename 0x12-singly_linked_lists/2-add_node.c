@@ -22,7 +22,7 @@ list_t *add_node(list_t **head, const char *str)
 	return (NULL);
 
 	while (str[stringlength] != '\0')
-		++stringlength;
+		stringlength++;
 
 	pnewnode->str = duplistring;
 	pnewnode->len = stringlength;
