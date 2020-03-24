@@ -14,7 +14,7 @@ unsigned int count_the_nodes = 0;
 	if (head == NULL)
 		return (NULL);
 
-	for (count_the_nodes = 0; count_the_nodes <= index; count_the_nodes++)
+	for (count_the_nodes = 0; count_the_nodes </*=*/ index; count_the_nodes++)
 	{
 		head = head->next;
 
