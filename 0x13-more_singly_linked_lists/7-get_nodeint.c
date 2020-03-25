@@ -36,7 +36,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	/*return (head);*/
 	return (0);
 }
-/* create int to count nodes during the for loop */
-/* for loop that stops on the nth element by stopping at the index*/
-/* if head->next is equal to null return Null*/
-/*return the node that the loop stops on*/
+/*initialize and declare variables for a counter and pointer to a struct/node*/
+/*check if head pointer/node is null if so return null*/
+/*set node pointer to point to head pointer*/
+/*starting from 0 increment until headcopy pointer/node is null*/
+/*if the counter is equal to the index return the node it stops on*/
+/*if not traverse the linked list until it does*/
+/*if a node does not exist at that index return 0*/
