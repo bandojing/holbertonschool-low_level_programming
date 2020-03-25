@@ -37,9 +37,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		if (swapspace == NULL)
 		{
-			free (newnode);
+			free(newnode);
 			return (NULL);
-			
+
 		}
 		swapspace = swapspace->next;
 	}
