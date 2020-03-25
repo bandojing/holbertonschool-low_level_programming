@@ -9,22 +9,32 @@
   */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-unsigned int count_the_nodes = 0;
+	unsigned int count_the_nodes = 0;
+	listint_t *headcopy;
+
 
 	if (head == NULL)
 		return (NULL);
 
-	for (count_the_nodes = 0; count_the_nodes </*=*/ index; count_the_nodes++)
-	{
-		head = head->next;
+	headcopy = head;
 
-		if (head->next == NULL)
-		{
-			return (NULL);
-		}
+	/*while (headcopy != NULL)*/
+
+	for (count_the_nodes = 0; headcopy != NULL; count_the_nodes++)
+	{
+		if (count_the_nodes == index)
+			return (headcopy);
+		headcopy = headcopy->next;
+		/*head = head->next;*/
+
+		/*if (head->next == NULL)*/
+		/*{*/
+			/*return (NULL);*/
+		/*}*/
 	}
 
-	return (head);
+	/*return (head);*/
+	return (0);
 }
 /* create int to count nodes during the for loop */
 /* for loop that stops on the nth element by stopping at the index*/
