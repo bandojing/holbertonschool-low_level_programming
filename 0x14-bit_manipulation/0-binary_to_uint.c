@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 	/*scan through and check if char in string is 0 or 1*/
 	for (scan = 0; b[scan] != '\0'; scan++)
 	{
-		if (b[scan] != '0' || b[scan] != '1')
+		if (b[scan] != '0' &&  b[scan] != '1')
 			return (0);
 	}
 	
@@ -28,8 +28,9 @@ unsigned int binary_to_uint(const char *b)
 	for (scan2 = 0; b[scan2] != '\0'; scan2++)
 	{ 	
 		/*convert char to int*/
-		number = b[scan2] - 48;
-		
+		number = b[scan2] - '0';
+		/*printf ("number is : %i\n", number);*/
+
 		/*get remainder of divided by 10*/
 		last = number % 10;
 
@@ -37,7 +38,7 @@ unsigned int binary_to_uint(const char *b)
 		number = number / 10;
 
 		/*decimal value of number*/
-		decimal = decimal + last * base;
+		decimal = (decimal + last) * base;
 		
 		/*mult base by two*/
 		base = base * 2;
@@ -45,6 +46,7 @@ unsigned int binary_to_uint(const char *b)
 
 	/*when its over return the number*/
 	return (decimal);
+	/*return (0);*/
 
 }
 	/** int res = 0; // Initialize result 
