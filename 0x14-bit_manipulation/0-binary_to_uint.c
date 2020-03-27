@@ -1,78 +1,51 @@
 #include "holberton.h"
-
-
-
+/**
+ * binary_to_uint - converts binary to unsigned int/decimal
+ * @b: pointer to string
+ *
+ * Description: gets lenght of string, checks if there is
+ * anything besides 0 or 1 in string converts char to int
+ * and converts binary to unsigned int/decimal and returns
+ * it
+ * Return: returns unsigned int / decimal
+ */
 unsigned int binary_to_uint(const char *b)
-{	
-	/*unsigned int counter;*/
-	/*unsigned int decimal;*/
-	int scan = 0;
-	int scan2 = 0;
-	unsigned int decimal = 0;
-	int base = 1;
-	unsigned int last;
-	unsigned int number;
+{
 
-	/*check if string is null*/
-	if (b == NULL)
-		return (0);
+unsigned int sum2 = 0;
+int counter = 0;
+int checker = 0;
+char letterchar;
+int lettertoint;
+int counter2 = 0;
+int i = 0;
 
-	/*scan through and check if char in string is 0 or 1*/
-	for (scan = 0; b[scan] != '\0'; scan++)
+
+if (b == NULL)
+	return (0);
+
+/*get length*/
+for (counter = 0; b[counter] != '\0'; counter++)
+{
+}
+/*check if 0 or 1*/
+for (checker = 0; checker <= counter - 1 ; checker++)
+{
+	if (b[checker] != '0' && b[checker] != '1')
 	{
-		if (b[scan] != '0' &&  b[scan] != '1')
-			return (0);
+		return (0);
 	}
-	
-	/*loop through to end of string*/
-	for (scan2 = 0; b[scan2] != '\0'; scan2++)
-	{ 	
-		/*convert char to int*/
-		number = b[scan2] - '0';
-		/*printf ("number is : %i\n", number);*/
+}
 
-		/*get remainder of divided by 10*/
-		last = number % 10;
-
-		/*number now is result of / by 10*/
-		number = number / 10;
-
-		/*decimal value of number*/
-		decimal = (decimal + last) * base;
-		
-		/*mult base by two*/
-		base = base * 2;
-	}
-
-	/*when its over return the number*/
-	return (decimal);
-	/*return (0);*/
+/*convert to int then output sum*/
+for (counter2 = counter - 1; counter2 >= 0; counter2--, i++)
+{
+	letterchar = b[counter2];
+	lettertoint = letterchar - '0';
+	sum2 += lettertoint << i/*counter2*/;
 
 }
-	/** int res = 0; // Initialize result 
-	  *   // Iterate through all characters of input string and 
-	  *  // update result 
-	  *   for (int i = 0; str[i] != '\0'; ++i)
-	   *  {
-	*	             res = res * 10 + b[i] - '0';
-*
-*			     int temp = num;
-*
-*			     while (temp)
-*			     {
-*				     int last_digit = temp % 10;
-*				     temp = temp / 10;
-*
-*				     dec_value = dec_value + last_digit * base;
-*
-*				     base = base * 2;
-*			     }
-*
-*			     _putchar(base + '0');
-*	     }
-*	       
-*	         // return result. 
-*	         return res; 
-*/
+return (sum2);
 
-
+/*printf("sum of letter is %d\n", sum2);*/
+}
