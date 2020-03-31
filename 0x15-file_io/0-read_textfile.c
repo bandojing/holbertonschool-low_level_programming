@@ -1,43 +1,54 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "holberton.h"
+/**
+ * read_textfile - reads a textfile returns number of bytes
+ * @filename: the file passed into function
+ * @letters: size of letters to print
+ *
+ * Description: function that reads and prints a file and returns
+ * the number of bytes
+(* section header: Section description)*
+ * Return: returns the number of bytes
+ */
 
-size_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int c;
-	File *fptr;
-	size_t letters_read_print = 0;
+	ssize_t reader, writter;
+	int file;
+	char *size;
 
-	/*if filename is null return 0*/
 	if (filename == NULL)
+	{
 		return (0);
+	}
 
-	/*if unable to open file return 0*/
-      if((fptr = fopen (filename, "r"))) == NULL)
-      {
+	size = malloc(letters);
 
-	      return (0);
+	if (size == NULL)
+	{
+		return (0);
+	}
 
-	      exit (1);
-      }
+	file = open(filename, O_RDONLY);
+		if (file == -1)
+		{
+			free(size);
+			return (0);
+		}
 
+	reader = read(file, size, letters);
+		if (reader == -1)
+		{
+			close(file);
+			free(size);
+			return (0);
+		}
 
-      /*print to posix standard output*/
-      if (fptr)
-      {
-	      while (( c = getc(fptr)) != EOF)
-	      {
-		 putchar (c);
-		letters_read_print++;
-	      }
+	writter = write(STDOUT_FILENO, size, reader);
+	free(size);
+	close(file);
 
-	if ( letters_read_print != letters)
-		return(0);
+	if (writter == reader)
+		return (writter);
 
-      /*close the file*/
-      fclose(fptr);
-      }
-
-      return (letters_read_print);
+	return (0);
 }
-
