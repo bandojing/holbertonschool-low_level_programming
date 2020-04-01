@@ -1,38 +1,39 @@
+
 #include "holberton.h"
 /**
  * create_file - creates a file and adds text
  * @filename: name of file to open
  * @text_content: text to add to open file
-(* a blank line
+ *
  * Description: adds text to an open file
  * Return: returns -1 if failure 1 if successful
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	int w;
-	int len = 0;
-
+	int fd, w, len;
+	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (filename == NULL)
 		return (-1);
 
-	/*get length of text_content*/
-		while (text_content != '\0')
+	if (text_content == NULL)
+	{
+		fd = open(filename, O_CREAT | O_RDWR, mode);
+		/*O_CREAT | O_RDWR, 0600);*/
+	}
+	else
+		fd = open(filename, O_TRUNC/*, 0600*/);
+
+		if (fd == -1)
 		{
-			len++;
+			return (-1);
 		}
 
 
-	/*truncate flag ,*/
-	fd = open(filename, O_CREAT, O_TRUNC, 0600);
-
-	if (fd == -1)
+	while (text_content)
 	{
-		return (-1);
+		len++;
 	}
-
-/*where writing to, string writing to, length*/
 
 	w = write(fd, text_content, len);
 
