@@ -12,26 +12,16 @@ int append_text_to_file(const char *filename, char *text_content)
 	int fd;
 	int w;
 	int counter;
-	mode_t mode = S_IRUSR | S_IWUSR;
+	/*mode_t mode = S_IRUSR | S_IWUSR;*/
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_APPEND | O_WRONLY | O_TRUNC, mode);
+	fd = open(filename, O_APPEND | O_WRONLY );
 
 	if (fd == -1)
 	{
 		return (-1);
-	}
-
-	if (text_content == NULL)
-	{
-		/*w = write(fd, "", 0);*/
-		/*if (w == -1)*/
-		if (!fd)
-			return (-1);
-
-		return (1);
 	}
 
 	for (counter = 0; text_content[counter] != '\0'; counter++)
