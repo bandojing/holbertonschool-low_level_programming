@@ -12,12 +12,12 @@ int create_file(const char *filename, char *text_content)
 	int fd;
 	int w;
 	int counter;
-
+	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_CREAT | O_WRONLY, 0600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, mode )/* 0600)*/;
 
 	if (fd == -1)
 	{
