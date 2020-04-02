@@ -4,7 +4,7 @@
 /**
  * main  - writes to the standard error
  *
- * 
+ *
  * section header: Section description
  * Return: returns 1
  */
