@@ -4,7 +4,7 @@
 /**
  * main  - writes to the standard error
  *
- * Description: writes sentence to std output
+ * 
  * section header: Section description
  * Return: returns 1
  */
