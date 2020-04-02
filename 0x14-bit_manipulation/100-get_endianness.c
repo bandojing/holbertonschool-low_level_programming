@@ -11,15 +11,4 @@ int get_endianness(void)
 	unsigned int determinant = 1;
 	char *endianness = (char*) &determinant;
 	return (int)*endianness;
-
-	/*if (*endianness)*/
-	/*{*/
-	/*	printf("Little Endian\n");*/
-	/*	return (1);*/
-	/*}*/
-	/*else*/
-	/*{*/
-	/*	printf("Big Endian\n");*/
-	/*}*/
-	/*	return (0);*/
 }
