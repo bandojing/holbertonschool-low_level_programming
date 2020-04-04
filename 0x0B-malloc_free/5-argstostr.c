@@ -2,15 +2,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * strdup - copies one string to another and returns pointer to copy
- * @str: string passed in from outside will be copied into newstring
-(* a blank line
-* Description:  a function that returns a pointer to a newly allocated
-* space in memory, which contains a copy of the string given as a parameter
+ * argstostr - a function that concatenates all the arguments of the program
+ * @ac: argument count
+ * @av: argument array
+ *
+* Description: a function that concatenates all the arguments of the program
 (* section header: Section description)*
-* Return: returns copy of str
+* Return: returns null
 */
 char *argstostr(int ac, char **av)
 {
-	return(NULL);
+	int counter;
+
+	if (ac == 0 || *av == NULL)
+	{
+		return (NULL);
+	}
+
+	for (counter = 0; counter < ac; counter++)
+	{
+		printf("%s\n", av[counter]);
+	}
+
+	return (0);
 }
